@@ -1,25 +1,27 @@
-package com.codecafe.currencyexchangeservice;
+package com.codecafe.currencyconversionservice;
 
 import java.math.BigDecimal;
 
-public class CurrencyExchangeValue {
+public class CurrencyConversion {
     private Long id;
     private String from;
     private String to;
+    private BigDecimal quantity;
     private BigDecimal conversionMultiple;
+    private BigDecimal totalCalculatedAmount;
     private String environment;
 
-
-    public CurrencyExchangeValue() {
-
-    }
-
-    public CurrencyExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple, String environment) {
+    public CurrencyConversion(Long id, String from, String to, BigDecimal quantity, BigDecimal conversionMultiple, BigDecimal totalCalculatedAmount, String environment) {
         this.id = id;
         this.from = from;
         this.to = to;
         this.conversionMultiple = conversionMultiple;
+        this.quantity = quantity;
+        this.totalCalculatedAmount = totalCalculatedAmount;
         this.environment = environment;
+    }
+
+    public CurrencyConversion() {
     }
 
     public Long getId() {
@@ -52,6 +54,22 @@ public class CurrencyExchangeValue {
 
     public void setConversionMultiple(BigDecimal conversionMultiple) {
         this.conversionMultiple = conversionMultiple;
+    }
+
+    public BigDecimal getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(BigDecimal quantity) {
+        this.quantity = quantity;
+    }
+
+    public BigDecimal getTotalCalculatedAmount() {
+        return totalCalculatedAmount;
+    }
+
+    public void setTotalCalculatedAmount(BigDecimal totalCalculatedAmount) {
+        this.totalCalculatedAmount = totalCalculatedAmount;
     }
 
     public String getEnvironment() {
