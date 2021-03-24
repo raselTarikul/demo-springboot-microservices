@@ -24,7 +24,7 @@ public class CurrencyConversionController {
 
         CurrencyConversion cv = currencyExcjangeProxy.getExchange(from, to);
 
-        return new CurrencyConversion(cv.getId(), from, to, cv.getConversionMultiple(), BigDecimal.ONE, cv.getConversionMultiple().multiply(BigDecimal.ONE), cv.getEnvironment());
+        return new CurrencyConversion(cv.getId(), from, to, quantity, cv.getConversionMultiple(), cv.getConversionMultiple().multiply(quantity), cv.getEnvironment());
 
     }
 }

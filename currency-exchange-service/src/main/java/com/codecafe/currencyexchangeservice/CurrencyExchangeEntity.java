@@ -2,7 +2,7 @@ package com.codecafe.currencyexchangeservice;
 
 import java.math.BigDecimal;
 
-public class CurrencyExchangeValue {
+public class CurrencyExchangeEntity {
     private Long id;
     private String from;
     private String to;
@@ -10,11 +10,11 @@ public class CurrencyExchangeValue {
     private String environment;
 
 
-    public CurrencyExchangeValue() {
+    public CurrencyExchangeEntity() {
 
     }
 
-    public CurrencyExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple, String environment) {
+    public CurrencyExchangeEntity(Long id, String from, String to, BigDecimal conversionMultiple, String environment) {
         this.id = id;
         this.from = from;
         this.to = to;
